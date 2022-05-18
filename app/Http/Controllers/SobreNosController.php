@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CategoriaController extends Controller
+class SobreNosController extends Controller
 {
     public function index(){
-        return view('categoria');
+        return view('sobre-nos',['titulo' => 'Sobre - nós']);
     }
 }
