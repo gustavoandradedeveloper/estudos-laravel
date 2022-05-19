@@ -15,9 +15,7 @@ use App\Http\Controllers\SobreNosController;
 |
 */
 
-Route::get('/', function () {
-    return view('principal');
-});
+Route::get('/',[PrincipalController::class,'index']);
 
 
 
