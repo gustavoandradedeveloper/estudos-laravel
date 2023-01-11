@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PrincipalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', function (){
+    return 'Ola mundo';
+});
+
+Route::fallback([PrincipalController::class,'index']);
+
+Route::get('primeira-rota',[PrincipalController::class,'primeiraRota']);
